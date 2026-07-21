@@ -7,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/YOUR_GITHUB_USERNAME/school-management-website.git'
+                url: 'https://github.com/Nithu-30/School-Management-Website-.git'
             }
         }
 
