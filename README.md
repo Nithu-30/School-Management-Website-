@@ -28,7 +28,7 @@ A responsive School Management Website developed using HTML, CSS, and JavaScript
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/school-management-website.git
+git clone https://github.com/Nithu-30/School-Management-Website-.git
 ```
 
 Open:
