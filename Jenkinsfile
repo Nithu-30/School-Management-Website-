@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout 'https://github.com/Nithu-30/School-Management-Website-.git'
             }
         }
 
