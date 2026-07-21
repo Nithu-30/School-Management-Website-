@@ -1,13 +1,11 @@
 pipeline {
-
     agent any
 
     stages {
 
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                url: 'https://github.com/Nithu-30/School-Management-Website-.git'
+                checkout scm
             }
         }
 
@@ -31,12 +29,10 @@ pipeline {
                 sh '''
                 docker run -d \
                 --name school-website \
-                -p 80:80 \
+                -p 8081:80 \
                 school-website:v1
                 '''
             }
         }
-
     }
-
 }
