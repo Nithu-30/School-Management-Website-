@@ -1,20 +1,16 @@
 pipeline {
     agent any
-
     stages {
-
         stage('Checkout') {
             steps {
-                checkout 'https://github.com/Nithu-30/School-Management-Website-.git'
+                git branch: 'main', url: 'https://github.com/Nithu-30/School-Management-Website-.git'
             }
         }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t school-website:v1 .'
             }
         }
-
         stage('Remove Old Container') {
             steps {
                 sh '''
@@ -23,7 +19,6 @@ pipeline {
                 '''
             }
         }
-
         stage('Run Container') {
             steps {
                 sh '''
